@@ -47,39 +47,5 @@ Ele foi desenvolvido para demonstrar conceitos de **Programação Orientada a Ob
 
 Representação em UML
 
-+------------------+          1     *        +------------------+
-|     Cliente      |----------------------->|      Conta       |
-+------------------+                        +------------------+
-| - nome: string   |                        | # saldo: number  |
-| - cpf: string    |                        | numero: number   |
-| - contas: Conta[]|                        | cliente: Cliente |
-| - chavesPix: ... |                        | transacoes: ...  |
-+------------------+                        +------------------+
-| + adicionarConta()|                       | + depositar()    |
-| + registrarPix() |                        | + sacar()        |
-| + getContaPix()  |                        | + transferir()   |
-| + toJSON()       |                        | + _registrarTx() |
-+------------------+                        | + toJSON()       |
-                                             +------------------+
-                                                      ^
-                                                      |
-                         +----------------------------+--------------------------+
-                         |                                                       |
-            +---------------------+                                +---------------------+
-            |   ContaCorrente     |                                |   ContaPoupanca     |
-            +---------------------+                                +---------------------+
-            | - limite: number    |                                | - taxaJuros: number |
-            +---------------------+                                +---------------------+
-            | + sacar()           |                                | + renderJuros()     |
-            +---------------------+                                +---------------------+
 
-+---------------------+
-|     Transacao       |
-+---------------------+
-| - tipo: string      |
-| - valor: number     |
-| - data: Date        |
-+---------------------+
-| + criarTransferencia() |
-+---------------------+
 ![alt text](image.png)
